@@ -3,6 +3,7 @@ public class Fish extends Animal implements Water {
     private String animalName;
 
     public Fish(String name) {
+        super(true);
         this.animalName = name;
     }
 
