@@ -1,12 +1,26 @@
 public abstract class Animal {
+    private boolean hasSpine;
+
+    protected Animal(boolean hasSpine) {
+        this.hasSpine = hasSpine;
+    }
+
     public void spec() {
         System.out.println("This is an animal");
     }
+
+    public void getHasSpine() {
+        if(hasSpine) {
+            System.out.println("This animal has a spine");
+        }
+    }
+
     public static void main(String[] args) {
         Cat cat0 = new Cat("someCat");
         System.out.println(cat0.getName());
         cat0.spec();
         cat0.wool();
+        cat0.getHasSpine();
 
         Bear br0 = new Bear("someBear");
         System.out.println(br0.getName());
